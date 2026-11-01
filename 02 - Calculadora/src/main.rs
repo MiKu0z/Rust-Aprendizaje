@@ -1,6 +1,5 @@
 use std::io;
 fn main() {
-
     loop {
         let mut opcion: String = String::new();
 
@@ -12,18 +11,14 @@ fn main() {
             .expect("Error al leer");
         let opcion: u8 = opcion.trim().parse().expect("No es una opción");
 
-        if opcion == 1 {
+        if (opcion == 1) || (opcion == 2){
             let resultado: i32 = ingresar_datos(opcion);
             println!("El resultado es: {}", resultado);
-
-        } else if opcion == 2 {
-            let resultado: i32 = ingresar_datos(opcion);
-            println!("El resultado es: {}", resultado)
         } else if opcion == 3 {
+            println!("Hasta la proxima!");
             break;
         }
     }
-    
 }
 
 fn ingresar_datos(opcion: u8) -> i32{
@@ -47,5 +42,4 @@ fn ingresar_datos(opcion: u8) -> i32{
     } else {
         0
     }
-
 }
